@@ -1,2 +1,2 @@
 # GitHub Actions Demo with Terraform
-Example Terraform code to be used for the GitHub Actions demo
+This is a simple Terraform repo to demonstrate usage with [GitHub Actions](https://github.com/features/actions)
