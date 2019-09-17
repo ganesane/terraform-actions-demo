@@ -1,14 +1,10 @@
-# Configure the Docker provider
-provider "docker" {
-  host = "tcp://0.0.0.0:2376/"
+# Configure the Azure provider
+provider "azurerm" {
+    version = "=1.27"
 }
 
-# Create a container
-resource "docker_container" "foo" {
-  image = "${docker_image.ubuntu.latest}"
-  name  = "foo"
-}
-
-resource "docker_image" "ubuntu" {
-  name = "ubuntu:latest"
+# Create an Azure resource group
+resource "azurerm_resource_group" "rg" {
+    name     = "demo-rg"
+    location = "eastus"
 }
